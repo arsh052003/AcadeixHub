@@ -16,7 +16,7 @@ namespace MauiApp3.ViewModels
         private string _password;
 
         [ICommand]
-        public async void Login()
+        public void Login()
         {
 
         }
