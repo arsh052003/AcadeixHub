@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiApp3.VieweModels;
+using MauiApp3.Views;
 
 namespace MauiApp3
 {
@@ -15,9 +16,12 @@ namespace MauiApp3
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+            builder.Services.AddSingleton<HomePage>();
+            builder.Services.AddSingleton<LoginPage>();
+            builder.Services.AddSingleton<ContactPage>();
+            builder.Services.AddSingleton<AboutPage>();
+
+            builder.Services.AddSingleton<LoginPageViewModel>();
 
             return builder.Build();
         }
