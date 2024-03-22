@@ -10,8 +10,8 @@ namespace MauiApp3.ViewModels
     public partial class BaseViewModel : ObservableObject
     {
         [ObservableProperty]
-        public bool _isBusy;
+        private bool _isBusy;
         [ObservableProperty]
-        public string _title;
+        private string _title;
     }
 }
