@@ -1,5 +1,5 @@
-﻿using MauiApp3.ViewModel;
-using MauiApp3.Views;
+﻿using MauiApp3.ViewModels;
+using MauiApp3.Views.Homepage;
 
 namespace MauiApp3
 {

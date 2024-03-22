@@ -4,22 +4,29 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp3"
-    xmlns:views="clr-namespace:MauiApp3.Views"
+    xmlns:HomePage="clr-namespace:MauiApp3.Views.Homepage"
     xmlns:models="clr-namespace:MauiApp3.Models"
-    Shell.TabBarIsVisible="False">>
+    xmlns:startupPage="clr-namespace:MauiApp3.Views.Startup"
+    Shell.TabBarIsVisible="False">
+
 
     <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:LoginPage}"
-    FlyoutItemIsVisible="False"
-    Shell.FlyoutBehavior="Disabled"
-    Route="LoginPage" />
-
-
+        Title="Login Page" FlyoutItemIsVisible="False" Shell.FlyoutBehavior="Disabled"
+        ContentTemplate="{DataTemplate startupPage:LoginPage}"
+        Route="LoginPage" />
     <FlyoutItem Route="HomePage" FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Home" Icon="{x:Static models:Icons.Dashboard}" ContentTemplate="{DataTemplate views:HomePage}"/>
-        <ShellContent Title="Contact" Icon="{x:Static models:Icons.ContactUs}" ContentTemplate="{DataTemplate views:ContactPage}"/>
-        <ShellContent Title="About" Icon="{x:Static models:Icons.AboutUs}" ContentTemplate="{DataTemplate views:AboutPage}"/>
+        <ShellContent
+            Title="HomePage" Icon="{x:Static models:Icons.Dashboard}"
+            ContentTemplate="{DataTemplate HomePage:HomePage}" />
+        <ShellContent
+            Title="People" Icon="{x:Static models:Icons.People}"
+            ContentTemplate="{DataTemplate HomePage:HomePage}" />
+        <ShellContent
+            Title="Contact Us" Icon="{x:Static models:Icons.ContactUs}"
+            ContentTemplate="{DataTemplate HomePage:HomePage}" />
+        <ShellContent
+            Title="About Us" Icon="{x:Static models:Icons.AboutUs}"
+            ContentTemplate="{DataTemplate HomePage:HomePage}" />
     </FlyoutItem>
 
     <Shell.FlyoutFooter>
