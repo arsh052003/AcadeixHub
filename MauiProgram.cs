@@ -1,5 +1,8 @@
-﻿using MauiApp3.VieweModels;
-using MauiApp3.Views;
+﻿using MauiApp3.Views.Startup;
+using MauiApp3.ViewModels.Startup;
+using Microsoft.Extensions.Logging;
+using MauiApp3.Views.Homepage;
+using MauiApp3.ViewModels.Homepage;
 
 namespace MauiApp3
 {
@@ -16,13 +19,16 @@ namespace MauiApp3
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<HomePage>();
+            //Views
             builder.Services.AddSingleton<LoginPage>();
-            builder.Services.AddSingleton<ContactPage>();
-            builder.Services.AddSingleton<AboutPage>();
+            builder.Services.AddSingleton<HomePage>();
 
             builder.Services.AddSingleton<LoginPageViewModel>();
+            builder.Services.AddSingleton<HomePageViewModel>();
 
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
             return builder.Build();
         }
     }
