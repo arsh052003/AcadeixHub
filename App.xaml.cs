@@ -1,10 +1,12 @@
 ﻿using Microsoft.Maui.Platform;
 using MauiApp3.Handlers;
+using MauiApp3.Models;
 
 namespace MauiApp3
 {
     public partial class App : Application
     {
+        public static UserInfo UserDetails;
         public App()
         {
             InitializeComponent();

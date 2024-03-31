@@ -14,20 +14,7 @@
         Title="Login Page" FlyoutItemIsVisible="False" Shell.FlyoutBehavior="Disabled"
         ContentTemplate="{DataTemplate startupPage:LoginPage}"
         Route="LoginPage" />
-    <FlyoutItem Route="HomePage" FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent
-            Title="HomePage" Icon="{x:Static models:Icons.Dashboard}"
-            ContentTemplate="{DataTemplate HomePage:HomePage}" />
-        <ShellContent
-            Title="People" Icon="{x:Static models:Icons.People}"
-            ContentTemplate="{DataTemplate HomePage:HomePage}" />
-        <ShellContent
-            Title="Contact Us" Icon="{x:Static models:Icons.ContactUs}"
-            ContentTemplate="{DataTemplate HomePage:HomePage}" />
-        <ShellContent
-            Title="About Us" Icon="{x:Static models:Icons.AboutUs}"
-            ContentTemplate="{DataTemplate HomePage:HomePage}" />
-    </FlyoutItem>
+    
 
     <Shell.FlyoutFooter>
         <StackLayout Padding="20">
