@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using MauiApp3.Controls;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MauiApp3.ViewModels.Homepage
@@ -7,7 +8,7 @@ namespace MauiApp3.ViewModels.Homepage
     {
         public HomePageViewModel()
         {
-            Title = "Welcome";
+            AppShell.Current.FlyoutHeader = new FlyoutHeaderControl();
         }
 
     }
